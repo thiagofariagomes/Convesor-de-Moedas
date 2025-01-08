@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Convesor De Moedas</title>
+</head>
+
+<body>
+
+    <img src="./assets/logo.gif" alt="Logo-Do-Convesor-De-Moedas" id="logo">
+
+    <main>
+
+        <label>
+
+            <p>Converter <b>de</b></p>
+            <select>
+                <option>R$ Real brasileiro</option>
+            </select>
+
+        </label>
+
+        <label>
+
+            <p>Converter <b>para</b></p>
+            <select class="coin-select">
+                <option value="dolar">US$ Dólar americano</option>
+                <option value="euro">€ Euro</option>
+            </select>
+
+        </label>
+
+        <label>
+
+            Valor
+            <input class="input-values" placeholder="R$10.000">
+
+        </label>
+
+        <button class="convert-button">Converter</button>
+
+        <section>
+
+            <div class="coin-box">
+
+                <img src="./assets/real.png" alt="Moeda-convertendo">
+
+                <p class="coin">Real</p>
+
+                <p class="coin-value-to-convert">R$ 0,00</p>
+
+            </div>
+
+            <img class="seta-img" src="./assets/seta.png" alt="seta">
+
+            <div class="coin-box">
+
+                <img id="coin-img" src="./assets/dolar.png" alt="Moeda-convertida">
+
+                <p class="coin" id="coin-name">Dolar</p>
+
+                <p class="coin-value">US$ 0,00</p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+</body>
+<script src="./arquivo.js"></script>
+
+</html>
