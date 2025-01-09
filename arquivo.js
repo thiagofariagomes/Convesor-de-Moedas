@@ -11,6 +11,8 @@ function convertValues() {
 
     const dolarToday = 6
     const euroToday = 6.3
+    const libraToday = 7.46
+    const pesosArgentinosToday = 170.73
 
 
     if (convertselect.value == "dolar"){
@@ -28,6 +30,24 @@ function convertValues() {
             style: "currency",
             currency: "EUR" 
         }).format (inputCoinValue / euroToday)
+
+    }
+
+    if (convertselect.value == "libra"){
+
+        CoinValueConverted.innerHTML = new Intl.NumberFormat ("en-GB", {
+            style: "currency",
+            currency: "GBP"
+        }).format (inputCoinValue / libraToday)
+
+    }
+
+    if (convertselect.value == "pesos-argentinos"){
+
+        CoinValueConverted.innerHTML = new Intl.NumberFormat ("es-AR", {
+            style: "currency",
+            currency: "ARS"
+        }).format (inputCoinValue * pesosArgentinosToday)
 
     }
 
@@ -57,6 +77,18 @@ function changeCoin (){
 
         coinName.innerHTML = "Euro" 
         coinImg.src = "./assets/euro.png"
+    }
+
+    if (convertselect.value == "libra"){
+
+        coinName.innerHTML = "Libra"
+        coinImg.src = "./assets/libra.png"
+    }
+
+    if (convertselect.value == "pesos-argentinos"){
+
+        coinName.innerHTML = "Pesos Argentinos"
+        coinImg.src = "./assets/argentina.png"
     }
 
     convertValues()
